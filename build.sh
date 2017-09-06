@@ -43,6 +43,7 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --with-gettext \
                   --with-gd \
                   --with-jpeg-dir \
+                  --with-freetype-dir \
                   --enable-mbstring \
                   --with-mcrypt \
                   --with-mhash \
