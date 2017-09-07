@@ -18,4 +18,7 @@ cp conf/php7-fpm.init /etc/init.d/php7-fpm
 chmod +x /etc/init.d/php7-fpm
 update-rc.d php7-fpm defaults
 
+# Add memcache
+./extensions/memcached-install.sh
+
 service php7-fpm start
