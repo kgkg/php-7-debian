@@ -2,25 +2,15 @@
 cd "$(dirname "$0")"
 
 # Dependencies
-sudo apt-get update
-sudo apt-get install -y \
+apt-get update
+apt-get install -y \
     libmemcached-dev \
-    libmemcached11
 
-git clone https://github.com/php-memcached-dev/php-memcached
-cd php-memcached
-
-# Fetch the latest changes
-git fetch --tags --prune
-
-# Get the latest tag
-TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
-
-git checkout -f tags/$TAG
-git reset --hard
-
+cd /usr/src
+wget https://github.com/websupport-sk/pecl-memcache/archive/NON_BLOCKING_IO_php7.zip
+unzip NON_BLOCKING_IO_php7.zip
+cd pecl-memcache-NON_BLOCKING_IO_php7
 /usr/local/php7/bin/phpize
-./configure --with-php-config=/usr/local/php7/bin/php-config
+./configure --enable-memcache --with-php-config=/usr/local/php7/bin/php-config
 
-make
-sudo make install
+make && make install
