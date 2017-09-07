@@ -8,7 +8,10 @@ mkdir /usr/local/php7/etc/conf.d
 ln -s /usr/local/php7/sbin/php-fpm /usr/local/php7/sbin/php7-fpm
 
 # Add config files
+cp conf/php.ini /usr/local/php7/etc/php.ini
 ln -sf /usr/local/php7/etc/php.ini /usr/local/php7/lib/php.ini
+
+
 cp conf/www.conf /usr/local/php7/etc/php-fpm.d/www.conf
 cp conf/php-fpm.conf /usr/local/php7/etc/php-fpm.conf
 cp conf/modules.ini /usr/local/php7/etc/conf.d/modules.ini
