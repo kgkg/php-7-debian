@@ -9,6 +9,7 @@ cd libmemcached-1.0.18
 make
 make install
 
+# php-memcached
 cd ..
 git clone https://github.com/php-memcached-dev/php-memcached
 cd php-memcached
