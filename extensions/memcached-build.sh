@@ -2,12 +2,12 @@
 cd "$(dirname "$0")"
 
 # Dependencies
-wget https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
-tar zvxf libmemcached-1.0.18.tar.gz
-cd libmemcached-1.0.18
-./configure
-make
-make install
+#wget https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
+#tar zvxf libmemcached-1.0.18.tar.gz
+#cd libmemcached-1.0.18
+#./configure
+#make
+#make install
 
 # php-memcached
 cd ..
