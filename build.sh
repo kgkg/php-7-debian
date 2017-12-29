@@ -24,10 +24,10 @@ apt-get install -y \
 mv /usr/local/php7 /usr/local/php7_prev
 mkdir /usr/local/php7
 
-git clone https://github.com/php/php-src.git
+git clone -b PHP-7.2.0 --depth=1 https://github.com/php/php-src.git
 cd php-src
-git fetch --tags --prune
-git checkout tags/php-7.2.0
+git checkout PHP-7.2.0
+ 
 ./buildconf --force
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
