@@ -21,14 +21,14 @@ apt-get install -y \
     libpspell-dev \
     libreadline-dev
 
-mv /usr/local/php7 /usr/local/php7_prev
-mkdir /usr/local/php7
-
 git clone -b PHP-7.2.0 --depth=1 https://github.com/php/php-src.git
 cd php-src
 git checkout PHP-7.2.0
  
 ./buildconf --force
+
+mv /usr/local/php7 /usr/local/php7_prev
+mkdir /usr/local/php7
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --enable-huge-code-pages \
