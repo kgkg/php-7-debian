@@ -21,12 +21,13 @@ apt-get install -y \
     libpspell-dev \
     libreadline-dev
 
+mv /usr/local/php7 /usr/local/php7_prev
 mkdir /usr/local/php7
 
 git clone https://github.com/php/php-src.git
 cd php-src
 git fetch --tags --prune
-git checkout tags/php-7.1.9
+git checkout tags/php-7.2.0
 ./buildconf --force
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
@@ -36,16 +37,12 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --enable-bcmath \
                   --with-bz2 \
                   --enable-calendar \
-                  --enable-intl \
-                  --enable-exif \
-                  --enable-dba \
                   --enable-ftp \
                   --with-gettext \
                   --with-gd \
                   --with-jpeg-dir \
                   --with-freetype-dir \
                   --enable-mbstring \
-                  --with-mcrypt \
                   --with-mhash \
                   --enable-mysqlnd \
                   --with-mysql=mysqlnd \
@@ -54,7 +51,6 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --with-pdo-mysql=mysqlnd \
                   --with-openssl \
                   --enable-pcntl \
-                  --with-pspell \
                   --enable-shmop \
                   --enable-soap \
                   --enable-sockets \
