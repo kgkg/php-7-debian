@@ -7,6 +7,12 @@ mkdir /usr/local/php7/etc/conf.d
 # Symlink php-fpm to php7-fpm
 ln -s /usr/local/php7/sbin/php-fpm /usr/local/php7/sbin/php7-fpm
 
+# Symlinks for /bin folder
+ln -sf /usr/local/php7/bin/php /usr/bin/php
+ln -sf /usr/local/php7/bin/php-cgi /usr/bin/php-cgi
+ln -sf /usr/local/php7/bin/php-config /usr/bin/php-config
+ln -sf /usr/local/php7/bin/phpize /usr/bin/phpize
+
 # Add config files
 cp conf/php.ini /usr/local/php7/etc/php.ini
 ln -sf /usr/local/php7/etc/php.ini /usr/local/php7/lib/php.ini
