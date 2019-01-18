@@ -21,9 +21,9 @@ apt-get install -y \
     libpspell-dev \
     libreadline-dev
 
-git clone -b PHP-7.2.0 --depth=1 https://github.com/php/php-src.git
+git clone -b PHP-7.3.1 --depth=1 https://github.com/php/php-src.git
 cd php-src
-git checkout PHP-7.2.0
+git checkout PHP-7.3.1
  
 ./buildconf --force
 
