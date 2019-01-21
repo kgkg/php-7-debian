@@ -19,7 +19,8 @@ apt-get install -y \
     libjpeg-dev \
     libpng-dev \
     libpspell-dev \
-    libreadline-dev
+    libreadline-dev \
+    libzip-dev
 
 git clone -b PHP-7.3.1 --depth=1 https://github.com/php/php-src.git
 cd php-src
