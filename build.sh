@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 cd "$(dirname "$0")"
 
 # Dependencies
@@ -22,9 +22,9 @@ apt-get install -y \
     libreadline-dev \
     libzip-dev
 
-git clone -b PHP-7.3.1 --depth=1 https://github.com/php/php-src.git
+git clone -b PHP-7.2.14 --depth=1 https://github.com/php/php-src.git
 cd php-src
-git checkout PHP-7.3.1
+git checkout PHP-7.2.14
  
 ./buildconf --force
 
