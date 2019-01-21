@@ -27,9 +27,6 @@ git checkout PHP-7.3.1
  
 ./buildconf --force
 
-mv /usr/local/php7 /usr/local/php7_prev
-mkdir /usr/local/php7
-
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --enable-huge-code-pages \
                   --with-config-file-scan-dir=/usr/local/php7/etc/conf.d \
@@ -69,7 +66,11 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
 ./configure $CONFIGURE_STRING
 
 make -j `cat /proc/cpuinfo | grep processor | wc -l`
+
+mv /usr/local/php7 /usr/local/php7_prev
+mkdir /usr/local/php7
+
 make install
 
-cd ../extensions
-./memcached-build.sh
+#cd ../extensions
+#./memcached-build.sh
